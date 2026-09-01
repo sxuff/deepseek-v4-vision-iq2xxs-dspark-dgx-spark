@@ -2,6 +2,8 @@
 
 A pinned llama.cpp recipe for serving `prometheusAIR/DeepSeek-V4-Flash-Vision-Exp-GGUF` IQ2_XXS with native image input and an external DSpark speculative draft on one NVIDIA GB10 system.
 
+![DeepSeek V4 Vision IQ2_XXS native DSpark result on one DGX Spark](assets/deepseek-v4-vision-dspark-result.png)
+
 DSpark is the default general-generation profile. `ngram-mod` is retained as a measured copy-heavy profile, and no-spec is the correctness control.
 
 ## Measured comparison
