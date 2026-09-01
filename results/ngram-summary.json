@@ -1,0 +1,112 @@
+{
+  "aggregate": {
+    "acceptance_rate": 0.6029411764705882,
+    "accepted_tokens": 2624.0,
+    "baseline_wall_seconds": 149.350124822,
+    "baseline_weighted_decode_tok_s": 21.49866126867225,
+    "completion_tokens_per_arm": 2995,
+    "draft_tokens": 4352.0,
+    "exact_content_matches": 3,
+    "exact_reasoning_matches": 4,
+    "finish_reason_matches": 4,
+    "ngram_wall_seconds": 59.874257785,
+    "ngram_weighted_decode_tok_s": 60.241448530269565,
+    "wall_speedup_x": 2.494396262218318
+  },
+  "design": {
+    "arms": [
+      "baseline",
+      "ngram-mod"
+    ],
+    "order": "baseline then ngram-mod",
+    "paired_cases": 4,
+    "reasoning_effort": "none",
+    "repetitions": 1,
+    "same_request_bytes": true,
+    "seed": 42,
+    "temperature": 0.0,
+    "treatment_flags": [
+      "--spec-type ngram-mod",
+      "--spec-ngram-mod-n-match 24",
+      "--spec-ngram-mod-n-min 48",
+      "--spec-ngram-mod-n-max 64"
+    ]
+  },
+  "evidence_label": "measured single paired sweep",
+  "quality_note": "Three copy/transform cases were byte-identical. Novel code had zero drafts and changed only the local variable name assignments\u2192assignment; token count, finish reason, and behavior were equivalent. This is not 4/4 byte parity.",
+  "rows": [
+    {
+      "acceptance_rate": 0.9761029411764706,
+      "accepted_tokens": 1062.0,
+      "baseline_decode_tok_s": 21.604363963999255,
+      "baseline_wall_seconds": 54.130560552,
+      "completion_tokens": 1103,
+      "decode_speedup_x": 6.778921735251004,
+      "draft_tokens": 1088.0,
+      "exact_content_match": true,
+      "exact_reasoning_match": true,
+      "finish_reason_match": true,
+      "id": "copy_python",
+      "ngram_decode_tok_s": 146.45429245182808,
+      "ngram_wall_seconds": 10.781264703,
+      "wall_speedup_x": 5.020798769270326
+    },
+    {
+      "acceptance_rate": 0.5118243243243243,
+      "accepted_tokens": 1212.0,
+      "baseline_decode_tok_s": 21.414395504773726,
+      "baseline_wall_seconds": 64.481519441,
+      "completion_tokens": 1311,
+      "decode_speedup_x": 2.521007538253362,
+      "draft_tokens": 2368.0,
+      "exact_content_match": true,
+      "exact_reasoning_match": true,
+      "finish_reason_match": true,
+      "id": "copy_json",
+      "ngram_decode_tok_s": 53.98585249467347,
+      "ngram_wall_seconds": 27.518044587,
+      "wall_speedup_x": 2.3432449655765946
+    },
+    {
+      "acceptance_rate": 0.390625,
+      "accepted_tokens": 350.0,
+      "baseline_decode_tok_s": 21.437019515079832,
+      "baseline_wall_seconds": 23.552532491,
+      "completion_tokens": 435,
+      "decode_speedup_x": 1.8336917821835859,
+      "draft_tokens": 896.0,
+      "exact_content_match": true,
+      "exact_reasoning_match": true,
+      "finish_reason_match": true,
+      "id": "structured_transform",
+      "ngram_decode_tok_s": 39.308886519311045,
+      "ngram_wall_seconds": 14.291575978,
+      "wall_speedup_x": 1.6480010691092448
+    },
+    {
+      "acceptance_rate": null,
+      "accepted_tokens": 0.0,
+      "baseline_decode_tok_s": 21.64887307236062,
+      "baseline_wall_seconds": 7.185512338,
+      "completion_tokens": 146,
+      "decode_speedup_x": 0.9867006101040251,
+      "draft_tokens": 0.0,
+      "exact_content_match": false,
+      "exact_reasoning_match": true,
+      "finish_reason_match": true,
+      "id": "novel_code",
+      "ngram_decode_tok_s": 21.360956268562823,
+      "ngram_wall_seconds": 7.283372517,
+      "wall_speedup_x": 0.9865638921019643
+    }
+  ],
+  "safety": {
+    "baseline_max_host_swap_growth_bytes": 4096,
+    "baseline_min_mem_available_bytes": 32771641344,
+    "ngram_max_host_swap_growth_bytes": 4096,
+    "ngram_min_mem_available_bytes": 34048970752,
+    "ngram_service_swap_bytes": 0
+  },
+  "schema_version": 1,
+  "scope_note": "One paired operational sweep. Copy-heavy and structured cases dominate the aggregate. Novel generation did not improve."
+}

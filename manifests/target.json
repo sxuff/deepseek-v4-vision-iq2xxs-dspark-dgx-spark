@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "bytes": 26774220480,
+      "path": "DeepSeek-V4-Flash-Vision-Exp-IQ2_XXS-00001-of-00004.gguf",
+      "sha256": "fb9ca39b780779d0edda3a68595860abe839ea6d5713df674a53b273ca1efc63"
+    },
+    {
+      "bytes": 24813505792,
+      "path": "DeepSeek-V4-Flash-Vision-Exp-IQ2_XXS-00002-of-00004.gguf",
+      "sha256": "3c329cb41e50b979043d3873991bd35b60d05a795aebb06e7dbeff66d7fbf94c"
+    },
+    {
+      "bytes": 26759662848,
+      "path": "DeepSeek-V4-Flash-Vision-Exp-IQ2_XXS-00003-of-00004.gguf",
+      "sha256": "802c5d1e0792aa7b411c66957ccf858190e5ade9221ffb79a85b340b02f5f7f2"
+    },
+    {
+      "bytes": 6305174400,
+      "path": "DeepSeek-V4-Flash-Vision-Exp-IQ2_XXS-00004-of-00004.gguf",
+      "sha256": "20755d0e82d931f35c4cde3ef345fb5c612075102986ad0b8cfb000e0cfbf503"
+    },
+    {
+      "bytes": 933258368,
+      "path": "mmproj-DeepSeek-V4-Flash-Vision-Exp-F16.gguf",
+      "sha256": "9d57b9bfd58c478c762045e5bf501fe3b9983bfa959921c7f2a6b1eccbeea49d"
+    }
+  ],
+  "repository": "prometheusAIR/DeepSeek-V4-Flash-Vision-Exp-GGUF",
+  "revision": "7ef3f44de46f7ab004257c0187e63b3b199e14e6",
+  "schema_version": 1,
+  "total_bytes": 85585821888,
+  "variant": "IQ2_XXS"
+}

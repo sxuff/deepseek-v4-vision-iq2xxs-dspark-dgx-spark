@@ -1,0 +1,11 @@
+artifacts/
+dspark-source/
+models/
+*.gguf
+*.safetensors
+*.part
+*.invalid
+.venv*/
+__pycache__/
+*.pyc
+results/local-*.json

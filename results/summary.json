@@ -1,0 +1,172 @@
+{
+  "arm_order": [
+    "no-spec",
+    "dspark"
+  ],
+  "arms": {
+    "dspark": {
+      "aggregate_whole_request_completion_tokens_per_second": 37.46753495298429,
+      "completion_tokens": 2995,
+      "maximum_host_swap_growth_bytes": 7102464,
+      "median_per_request_whole_request_completion_tokens_per_second": 35.710406756553816,
+      "minimum_mem_available_bytes": 22346145792,
+      "service_swap_bytes": 0,
+      "wall_seconds": 79.935869914,
+      "weighted_server_decode_tokens_per_second": 43.007510159537034
+    },
+    "no-spec": {
+      "aggregate_whole_request_completion_tokens_per_second": 20.05354869016368,
+      "completion_tokens": 2995,
+      "maximum_host_swap_growth_bytes": 4096,
+      "median_per_request_whole_request_completion_tokens_per_second": 20.325034622057768,
+      "minimum_mem_available_bytes": 32771641344,
+      "service_swap_bytes": 0,
+      "wall_seconds": 149.350124822,
+      "weighted_server_decode_tokens_per_second": 21.49866126867225
+    }
+  },
+  "design": {
+    "fixed_order": "no-spec then dspark",
+    "paired_requests_per_arm": 4,
+    "reasoning_effort": "none",
+    "repetitions": 1,
+    "same_request_bytes": true,
+    "seed": 42,
+    "temperature": 0.0,
+    "top_p": 1.0
+  },
+  "draft": {
+    "generated_gguf_bytes": 10896058816,
+    "generated_gguf_sha256": "4bd6ec83b6b31531a55459ee07b7eaede380ccd6a60cbe13003ec7ccf1eb2d77",
+    "generated_gguf_type": "native converter output: MXFP4_MOE with mixed BF16/F32/Q8_0 tensors; not Q2_K",
+    "source_mtp_tensor_count": 4708,
+    "source_repository": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "source_revision": "6821d6ad3681a4b137b066b76094fa82ebd0a380",
+    "source_shard_bytes": 10863345700
+  },
+  "evidence_label": "measured single paired sweep plus native-image smoke",
+  "gate": {
+    "all_outputs_exact": true,
+    "all_request_payloads_match": true,
+    "native_vision_passed": true,
+    "reserve_6_gib_passed": true,
+    "runtime_activation_verified": true,
+    "service_swap_zero": true
+  },
+  "hardware": "one NVIDIA GB10 system with 128 GB unified memory",
+  "metric_definitions": {
+    "aggregate_whole_request_completion_tokens_per_second": "sum of completion tokens divided by summed request wall time; includes prefill and first-token latency",
+    "weighted_server_decode_tokens_per_second": "sum of server-predicted tokens divided by summed server prediction seconds; excludes prefill"
+  },
+  "paired": {
+    "acceptance_rate": 0.9785370127025843,
+    "accepted_tokens": 2234.0,
+    "aggregate_whole_request_speed_ratio": 1.8683742978300002,
+    "draft_tokens": 2283.0,
+    "exact_output_matches": 4,
+    "finish_reason_matches": 4,
+    "request_payload_matches": 4,
+    "rows": 4,
+    "rows_detail": [
+      {
+        "acceptance_rate": 0.998792270531401,
+        "accepted_tokens": 827.0,
+        "completion_tokens": 1103,
+        "draft_tokens": 828.0,
+        "dspark_server_decode_tokens_per_second": 43.90049751243781,
+        "dspark_wall_seconds": 28.290940727,
+        "dspark_whole_request_completion_tokens_per_second": 38.987745605338986,
+        "exact_output_match": true,
+        "finish_reason_match": true,
+        "fixture_id": "copy_python",
+        "no_spec_server_decode_tokens_per_second": 21.604363963999255,
+        "no_spec_wall_seconds": 54.130560552,
+        "no_spec_whole_request_completion_tokens_per_second": 20.376659483147485,
+        "request_payload_match": true,
+        "whole_request_speed_ratio": 1.9133531498420435
+      },
+      {
+        "acceptance_rate": 0.9989837398373984,
+        "accepted_tokens": 983.0,
+        "completion_tokens": 1311,
+        "draft_tokens": 984.0,
+        "dspark_server_decode_tokens_per_second": 43.444977979261736,
+        "dspark_wall_seconds": 33.502363394,
+        "dspark_whole_request_completion_tokens_per_second": 39.13156766232168,
+        "exact_output_match": true,
+        "finish_reason_match": true,
+        "fixture_id": "copy_json",
+        "no_spec_server_decode_tokens_per_second": 21.414395504773726,
+        "no_spec_wall_seconds": 64.481519441,
+        "no_spec_whole_request_completion_tokens_per_second": 20.331406756001662,
+        "request_payload_match": true,
+        "whole_request_speed_ratio": 1.9246856910562948
+      },
+      {
+        "acceptance_rate": 0.9969418960244648,
+        "accepted_tokens": 326.0,
+        "completion_tokens": 435,
+        "draft_tokens": 327.0,
+        "dspark_server_decode_tokens_per_second": 43.186895011169,
+        "dspark_wall_seconds": 13.412237203,
+        "dspark_whole_request_completion_tokens_per_second": 32.433067907768645,
+        "exact_output_match": true,
+        "finish_reason_match": true,
+        "fixture_id": "structured_transform",
+        "no_spec_server_decode_tokens_per_second": 21.437019515079832,
+        "no_spec_wall_seconds": 23.552532491,
+        "no_spec_whole_request_completion_tokens_per_second": 18.469351445167273,
+        "request_payload_match": true,
+        "whole_request_speed_ratio": 1.7560480130586906
+      },
+      {
+        "acceptance_rate": 0.6805555555555556,
+        "accepted_tokens": 98.0,
+        "completion_tokens": 146,
+        "draft_tokens": 144.0,
+        "dspark_server_decode_tokens_per_second": 34.228911708163366,
+        "dspark_wall_seconds": 4.73032859,
+        "dspark_whole_request_completion_tokens_per_second": 30.864663463051304,
+        "exact_output_match": true,
+        "finish_reason_match": true,
+        "fixture_id": "novel_code",
+        "no_spec_server_decode_tokens_per_second": 21.64887307236062,
+        "no_spec_wall_seconds": 7.185512338,
+        "no_spec_whole_request_completion_tokens_per_second": 20.318662488113873,
+        "request_payload_match": true,
+        "whole_request_speed_ratio": 1.519030274808034
+      }
+    ],
+    "weighted_server_decode_speed_ratio": 2.0004738723990863
+  },
+  "runtime": {
+    "build": "b10734-9c9a1546",
+    "context_tokens": 32768,
+    "cuda_architecture": "121a-real",
+    "patch_sha256": "0c07575cfc6c9abd9d0bec487117952a706a7edd00283461f3b7da54c60f1f57",
+    "repository": "tarruda/llama.cpp",
+    "revision": "9c9a1546d0159781f96e5c1c9ba479e74ecb54c4",
+    "slots": 1
+  },
+  "schema_version": 1,
+  "scope_note": "One fixed-order paired operational sweep with four text fixtures and one repetition. The image request proves native-vision compatibility but is not a matched vision speed benchmark.",
+  "study_id": "deepseek-v4-vision-iq2xxs-native-dspark-single-gb10-v1",
+  "target": {
+    "model_and_projector_bytes": 85585821888,
+    "repository": "prometheusAIR/DeepSeek-V4-Flash-Vision-Exp-GGUF",
+    "revision": "7ef3f44de46f7ab004257c0187e63b3b199e14e6",
+    "variant": "IQ2_XXS"
+  },
+  "vision_smoke": {
+    "acceptance_rate": 0.8095238095238095,
+    "accepted_tokens": 17.0,
+    "completion_tokens": 24,
+    "draft_tokens": 21.0,
+    "finish_reason": "stop",
+    "image_sha256": "5df896a4a07e127281c60fc957f8b3d73f4735b3258a0bf762b4383557f8fa9a",
+    "output": "The image shows a group of bright orange carrots with small green stems, resting against each other on a white background.",
+    "prompt_tokens": 327,
+    "server_decode_tokens_per_second": 37.53518923991272,
+    "wall_seconds": 6.41982292
+  }
+}

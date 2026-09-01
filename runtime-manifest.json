@@ -1,0 +1,19 @@
+{
+  "build": {
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CUDA_ARCHITECTURES": "121a-real",
+    "CMAKE_CUDA_COMPILER": "/usr/local/cuda/bin/nvcc",
+    "GGML_CUDA": "ON",
+    "binary_build": 10734,
+    "binary_commit": "9c9a1546",
+    "binary_version": "0.3.0-dev",
+    "compiler": "GNU 13.3.0",
+    "platform": "Linux aarch64"
+  },
+  "patch": "patches/dsv4-vision-routing.patch",
+  "patch_bytes": 9182,
+  "patch_sha256": "0c07575cfc6c9abd9d0bec487117952a706a7edd00283461f3b7da54c60f1f57",
+  "repository": "https://github.com/tarruda/llama.cpp.git",
+  "revision": "9c9a1546d0159781f96e5c1c9ba479e74ecb54c4",
+  "schema_version": 1
+}

@@ -1,0 +1,30 @@
+{
+  "elapsed_seconds": 6.41982292,
+  "finish_reason": "stop",
+  "image_sha256": "5df896a4a07e127281c60fc957f8b3d73f4735b3258a0bf762b4383557f8fa9a",
+  "memory": {
+    "available_after_bytes": 22640795648,
+    "available_before_bytes": 22838755328,
+    "swap_used_after_bytes": 546631680,
+    "swap_used_before_bytes": 546701312
+  },
+  "metrics": {
+    "acceptance_rate": 0.8095238095238095,
+    "accepted_tokens": 17.0,
+    "decode_tokens_per_second": 37.53518923991272,
+    "draft_tokens": 21.0,
+    "predicted_seconds": 0.6393999999999949,
+    "predicted_tokens": 24.0
+  },
+  "output": "The image shows a group of bright orange carrots with small green stems, resting against each other on a white background.",
+  "request_sha256": "076960e7f09d71bdec63fc1f399f8dcd36ae431906b92ebf34d331b8928b9072",
+  "schema_version": 1,
+  "usage": {
+    "completion_tokens": 24,
+    "prompt_tokens": 327,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 351
+  }
+}

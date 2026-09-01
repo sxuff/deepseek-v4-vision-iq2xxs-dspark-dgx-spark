@@ -1,0 +1,37 @@
+{
+  "generated_gguf": {
+    "generated_gguf_bytes": 10896058816,
+    "generated_gguf_sha256": "4bd6ec83b6b31531a55459ee07b7eaede380ccd6a60cbe13003ec7ccf1eb2d77",
+    "generated_gguf_type": "native converter output: MXFP4_MOE with mixed BF16/F32/Q8_0 tensors; not Q2_K",
+    "source_mtp_tensor_count": 4708,
+    "source_repository": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "source_revision": "6821d6ad3681a4b137b066b76094fa82ebd0a380",
+    "source_shard_bytes": 10863345700
+  },
+  "mtp_tensor_count": 4708,
+  "repository": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+  "revision": "6821d6ad3681a4b137b066b76094fa82ebd0a380",
+  "schema_version": 1,
+  "selected_weight_files": [
+    {
+      "bytes": 3610456288,
+      "path": "model-00046-of-00048.safetensors",
+      "sha256": "5259a8a51aad179d734aac1861f70a56fdbcf73f8a68a3362e6d25a875ce1b4e",
+      "verified": true
+    },
+    {
+      "bytes": 3560113064,
+      "path": "model-00047-of-00048.safetensors",
+      "sha256": "7954737da5507ebe0f4161e13ec8e6ba0afe72fea454fd84273c1b30c9bf71a6",
+      "verified": true
+    },
+    {
+      "bytes": 3692776348,
+      "path": "model-00048-of-00048.safetensors",
+      "sha256": "0de99b7dd23d964b0a631e9e6f14ea1751db6d14bf0f009c6a83b725ca5f909e",
+      "verified": true
+    }
+  ],
+  "tensor_scope": "mtp.* only",
+  "verified_weight_bytes": 10863345700
+}
