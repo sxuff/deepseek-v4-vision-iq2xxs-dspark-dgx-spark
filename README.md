@@ -1,5 +1,13 @@
 # DeepSeek V4 Vision IQ2_XXS + native DSpark on one DGX Spark
 
+## Run it
+
+```bash
+git clone https://github.com/sxuff/deepseek-v4-vision-iq2xxs-dspark-dgx-spark && cd deepseek-v4-vision-iq2xxs-dspark-dgx-spark && ./run.sh
+```
+
+Expected: **37.47 tok/s** aggregate whole-request completion rate, single stream (43.01 tok/s server decode) — receipt: [`results/summary.json`](results/summary.json)
+
 A pinned llama.cpp recipe for serving `prometheusAIR/DeepSeek-V4-Flash-Vision-Exp-GGUF` IQ2_XXS with native image input and an external DSpark speculative draft on one NVIDIA GB10 system.
 
 ![DeepSeek V4 Vision IQ2_XXS native DSpark result on one DGX Spark](assets/deepseek-v4-vision-dspark-result.png)
